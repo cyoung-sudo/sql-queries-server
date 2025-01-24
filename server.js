@@ -4,6 +4,7 @@ import "dotenv/config";
 import "./db/connection.js";
 // Routes
 import employeeRoutes from "./routes/employee.js";
+import clockinRoutes from "./routes/clockin.js";
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors({
 app.use(express.json());
 // Routes
 app.use("/api/employees", employeeRoutes);
+app.use("/api/clockins", clockinRoutes);
 
 // Start Express server
 app.listen(PORT, () => {
