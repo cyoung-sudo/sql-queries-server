@@ -10,7 +10,6 @@ employeeRoutes.route("/")
 
   connection.query(sql)
   .then(employees => {
-    console.log(employees[0]);
     res.json({
       employees: employees[0]
     });
@@ -24,7 +23,6 @@ employeeRoutes.route("/")
 
   connection.query(sql, sqlVals)
   .then(res2 => {
-    console.log(res2);
     res.json({
       success: true
     })

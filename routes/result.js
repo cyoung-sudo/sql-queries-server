@@ -8,7 +8,6 @@ resultRoutes.route("/")
 .post((req, res) => {
   connection.query(req.body.query)
   .then(employees => {
-    console.log(employees[0]);
     res.json({
       success: true,
       employees: employees[0]

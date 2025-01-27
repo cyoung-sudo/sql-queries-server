@@ -10,7 +10,6 @@ clockinRoutes.route("/")
 
   connection.query(sql)
   .then(clockins => {
-    console.log(clockins[0]);
     res.json({
       clockins: clockins[0]
     });
@@ -26,7 +25,6 @@ clockinRoutes.route("/")
 
   connection.query(sql, sqlVals)
   .then(res2 => {
-    console.log(res2);
     res.json({
       success: true
     });
